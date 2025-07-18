@@ -117,3 +117,26 @@ go test ./tests -v
   ├── main.go             # Entry point aplikasi
   └── README.md           # Dokumentasi
 ```
+
+## Example Test By Developer
+
+Register User
+<img width="1920" height="1031" alt="image" src="https://github.com/user-attachments/assets/152f7f21-d123-47f3-a3ff-8132a8bcd94a" />
+
+Login User
+<img width="1920" height="1031" alt="image" src="https://github.com/user-attachments/assets/df63b3a7-c4fa-4f41-8da7-83d0a4710e86" />
+
+Update User
+
+
+Top UP Balance
+<img width="1920" height="1031" alt="image" src="https://github.com/user-attachments/assets/2c05fb24-2219-4788-8df4-b8019d15aff5" />
+
+Make Payments
+<img width="1920" height="1031" alt="image" src="https://github.com/user-attachments/assets/1b81b63d-cee0-4b8a-9ac4-3cd3bafb7c29" />
+
+Transfer Money
+<img width="1920" height="1031" alt="image" src="https://github.com/user-attachments/assets/97bb98aa-f8c9-48d9-bacb-1656e2cd2433" />
+
+Transaction History
+<img width="1920" height="1031" alt="image" src="https://github.com/user-attachments/assets/63b05314-011a-4e78-a35b-6dd1d49542fe" />

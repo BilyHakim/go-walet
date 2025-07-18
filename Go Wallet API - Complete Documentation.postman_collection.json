@@ -1,0 +1,869 @@
+{
+	"info": {
+		"_postman_id": "756c9e1d-9ba7-4ad7-973f-4f6bd3284687",
+		"name": "Go Wallet API - Complete Documentation",
+		"description": "Dokumentasi lengkap API Go Wallet untuk testing semua endpoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17195449",
+		"_collection_link": "https://gold-water-221659.postman.co/workspace/Test-Kerja~58cbba37-ce40-4688-afe0-2a0d2de50b7c/collection/17195449-756c9e1d-9ba7-4ad7-973f-4f6bd3284687?action=share&source=collection_link&creator=17195449"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Bily\",\n  \"last_name\": \"Hakim\",\n  \"phone_number\": \"081234567890\",\n  \"address\": \"Jl. Sudirman No. 123, Jakarta\",\n  \"pin\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						},
+						"description": "Endpoint untuk registrasi user baru.\n\n**Request Body:**\n- `first_name` (string, required): Nama depan\n- `last_name` (string, required): Nama belakang\n- `phone_number` (string, required): Nomor telepon (unique)\n- `address` (string, required): Alamat\n- `pin` (string, required): PIN 6 digit\n\n**Response Success (200):**\n```json\n{\n  \"status\": \"SUCCESS\",\n  \"result\": {\n    \"first_name\": \"Bily\",\n    \"last_name\": \"Hakim\",\n    \"phone_number\": \"081234567890\",\n    \"address\": \"Jl. Sudirman No. 123, Jakarta\",\n    \"created_date\": \"2025-07-18 13:00:00\"\n  }\n}\n```"
+					},
+					"response": [
+						{
+							"name": "Register User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"first_name\": \"Bily\",\n  \"last_name\": \"Hakim\",\n  \"phone_number\": \"081234567890\",\n  \"address\": \"Jl. Sudirman No. 123, Jakarta\",\n  \"pin\": \"123456\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Jul 2025 13:31:03 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Phone number already exists\",\n    \"status\": \"ERROR\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Register User 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Amal\",\n  \"last_name\": \"Solihat\",\n  \"phone_number\": \"082298222515\",\n  \"address\": \"Jl. Pekanbaru No.12 tangerang\",\n  \"pin\": \"098765\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"register"
+							]
+						},
+						"description": "Endpoint untuk registrasi user baru.\n\n**Request Body:**\n- `first_name` (string, required): Nama depan\n- `last_name` (string, required): Nama belakang\n- `phone_number` (string, required): Nomor telepon (unique)\n- `address` (string, required): Alamat\n- `pin` (string, required): PIN 6 digit\n\n**Response Success (200):**\n```json\n{\n  \"status\": \"SUCCESS\",\n  \"result\": {\n    \"first_name\": \"Bily\",\n    \"last_name\": \"Hakim\",\n    \"phone_number\": \"081234567890\",\n    \"address\": \"Jl. Sudirman No. 123, Jakarta\",\n    \"created_date\": \"2025-07-18 13:00:00\"\n  }\n}\n```"
+					},
+					"response": [
+						{
+							"name": "Register User 2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"first_name\": \"Amal\",\n  \"last_name\": \"Solihat\",\n  \"phone_number\": \"082298222515\",\n  \"address\": \"Jl. Pekanbaru No.12 tangerang\",\n  \"pin\": \"098765\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/register",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Jul 2025 14:06:38 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "182"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"address\": \"Jl. Pekanbaru No.12 tangerang\",\n        \"created_date\": \"2025-07-18 14:06:38\",\n        \"first_name\": \"Amal\",\n        \"last_name\": \"Solihat\",\n        \"phone_number\": \"082298222515\"\n    },\n    \"status\": \"SUCCESS\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"phone_number\": \"081234567890\",\n  \"pin\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						},
+						"description": "Endpoint untuk login user.\n\n**Request Body:**\n- `phone_number` (string, required): Nomor telepon\n- `pin` (string, required): PIN user\n\n**Response Success (200):**\n```json\n{\n  \"status\": \"SUCCESS\",\n  \"result\": {\n    \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\",\n    \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\"\n  }\n}\n```\n\n**Note:** Simpan `access_token` untuk digunakan di endpoint yang memerlukan autentikasi."
+					},
+					"response": [
+						{
+							"name": "Login User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"phone_number\": \"081234567890\",\n  \"pin\": \"123456\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Jul 2025 13:57:23 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "500"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2ZhMzgyNzgtYjdiMC00MmY5LWEwYTQtMmNlNTY1N2QzN2I4IiwiZXhwIjoxNzUyOTMzNDQzLCJuYmYiOjE3NTI4NDcwNDMsImlhdCI6MTc1Mjg0NzA0M30.gBXBIPRoL0kyBJVC0mIyc4plUAWiszup3CIg3-snNgw\",\n        \"refresh_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2ZhMzgyNzgtYjdiMC00MmY5LWEwYTQtMmNlNTY1N2QzN2I4IiwiZXhwIjoxNzUzNDUxODQzLCJuYmYiOjE3NTI4NDcwNDMsImlhdCI6MTc1Mjg0NzA0M30.G-1yxTb2gd93MbjqYOYXvfMwkxIi9XPc56nsRwfmXbg\"\n    },\n    \"status\": \"SUCCESS\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Endpoint untuk autentikasi user (register dan login)"
+		},
+		{
+			"name": "User Profile",
+			"item": [
+				{
+					"name": "Update Profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"first_name\": \"Bily Updated\",\n  \"last_name\": \"Hakim Updated\",\n  \"address\": \"Jl. Thamrin No. 456, Jakarta\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/update-profile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"update-profile"
+							]
+						},
+						"description": "Endpoint untuk update profil user (memerlukan autentikasi).\n\n**Headers:**\n- `Authorization`: Bearer {access_token}\n\n**Request Body:**\n- `first_name` (string, optional): Nama depan baru\n- `last_name` (string, optional): Nama belakang baru\n- `address` (string, optional): Alamat baru\n\n**Response Success (200):**\n```json\n{\n  \"status\": \"SUCCESS\",\n  \"result\": {\n    \"first_name\": \"Bily Updated\",\n    \"last_name\": \"Hakim Updated\",\n    \"phone_number\": \"081234567890\",\n    \"address\": \"Jl. Thamrin No. 456, Jakarta\",\n    \"created_date\": \"2025-07-18 13:00:00\"\n  }\n}\n```"
+					},
+					"response": [
+						{
+							"name": "Update Profile",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"first_name\": \"Bily Updated\",\n  \"last_name\": \"Hakim Updated\",\n  \"address\": \"Jl. Thamrin No. 456, Jakarta\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/update-profile",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"update-profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Jul 2025 13:35:15 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "195"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"address\": \"Jl. Thamrin No. 456, Jakarta\",\n        \"created_date\": \"2025-07-18 13:13:46\",\n        \"first_name\": \"Bily Updated\",\n        \"last_name\": \"Hakim Updated\",\n        \"phone_number\": \"081234567890\"\n    },\n    \"status\": \"SUCCESS\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone_number\": \"081234567890\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/get-user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"get-user"
+							]
+						},
+						"description": "Endpoint untuk update profil user (memerlukan autentikasi).\n\n**Headers:**\n- `Authorization`: Bearer {access_token}\n\n**Request Body:**\n- `first_name` (string, optional): Nama depan baru\n- `last_name` (string, optional): Nama belakang baru\n- `address` (string, optional): Alamat baru\n\n**Response Success (200):**\n```json\n{\n  \"status\": \"SUCCESS\",\n  \"result\": {\n    \"first_name\": \"Bily Updated\",\n    \"last_name\": \"Hakim Updated\",\n    \"phone_number\": \"081234567890\",\n    \"address\": \"Jl. Thamrin No. 456, Jakarta\",\n    \"created_date\": \"2025-07-18 13:00:00\"\n  }\n}\n```"
+					},
+					"response": [
+						{
+							"name": "Get User 1",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phone_number\": \"081234567890\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/get-user",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"get-user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Jul 2025 14:05:33 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "166"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"first_name\": \"Bily Updated\",\n        \"last_name\": \"Hakim Updated\",\n        \"phone_number\": \"081234567890\",\n        \"user_id\": \"7fa38278-b7b0-42f9-a0a4-2ce5657d37b8\"\n    },\n    \"status\": \"SUCCESS\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User 2",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phone_number\": \"082298222515\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/get-user",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"get-user"
+							]
+						},
+						"description": "Endpoint untuk update profil user (memerlukan autentikasi).\n\n**Headers:**\n- `Authorization`: Bearer {access_token}\n\n**Request Body:**\n- `first_name` (string, optional): Nama depan baru\n- `last_name` (string, optional): Nama belakang baru\n- `address` (string, optional): Alamat baru\n\n**Response Success (200):**\n```json\n{\n  \"status\": \"SUCCESS\",\n  \"result\": {\n    \"first_name\": \"Bily Updated\",\n    \"last_name\": \"Hakim Updated\",\n    \"phone_number\": \"081234567890\",\n    \"address\": \"Jl. Thamrin No. 456, Jakarta\",\n    \"created_date\": \"2025-07-18 13:00:00\"\n  }\n}\n```"
+					},
+					"response": [
+						{
+							"name": "Get User 2",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"phone_number\": \"082298222515\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/get-user",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"get-user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Jul 2025 14:07:06 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "152"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"first_name\": \"Amal\",\n        \"last_name\": \"Solihat\",\n        \"phone_number\": \"082298222515\",\n        \"user_id\": \"531551f5-c34c-4c76-969a-302d83187560\"\n    },\n    \"status\": \"SUCCESS\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Endpoint untuk mengelola profil user"
+		},
+		{
+			"name": "Wallet Operations",
+			"item": [
+				{
+					"name": "Top Up Balance",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": 100000\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/topup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"topup"
+							]
+						},
+						"description": "Endpoint untuk top up saldo (memerlukan autentikasi).\n\n**Headers:**\n- `Authorization`: Bearer {access_token}\n\n**Request Body:**\n- `amount` (number, required): Jumlah top up (harus > 0)\n\n**Response Success (200):**\n```json\n{\n  \"status\": \"SUCCESS\",\n  \"result\": {\n    \"top_up_id\": \"uuid-string\",\n    \"amount_top_up\": 100000,\n    \"balance_before\": 0,\n    \"balance_after\": 100000,\n    \"created_date\": \"2025-07-18 13:00:00\"\n  }\n}\n```"
+					},
+					"response": [
+						{
+							"name": "Top Up Balance",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"amount\": 100000\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/topup",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"topup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Jul 2025 13:35:54 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "184"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"amount_top_up\": 100000,\n        \"balance_after\": 100000,\n        \"balance_before\": 0,\n        \"created_date\": \"2025-07-18 13:35:54\",\n        \"top_up_id\": \"61d0109a-dbdd-43ec-9c0d-15c12b79d590\"\n    },\n    \"status\": \"SUCCESS\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Make Payment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": 25000,\n  \"remarks\": \"Pembayaran makanan\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/payments",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"payments"
+							]
+						},
+						"description": "Endpoint untuk melakukan pembayaran (memerlukan autentikasi).\n\n**Headers:**\n- `Authorization`: Bearer {access_token}\n\n**Request Body:**\n- `amount` (number, required): Jumlah pembayaran (harus > 0)\n- `remarks` (string, required): Keterangan pembayaran\n\n**Response Success (200):**\n```json\n{\n  \"status\": \"SUCCESS\",\n  \"result\": {\n    \"payment_id\": \"uuid-string\",\n    \"amount\": 25000,\n    \"remarks\": \"Pembayaran makanan\",\n    \"balance_before\": 100000,\n    \"balance_after\": 75000,\n    \"created_date\": \"2025-07-18 13:00:00\"\n  }\n}\n```"
+					},
+					"response": [
+						{
+							"name": "Make Payment",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"amount\": 25000,\n  \"remarks\": \"Pembayaran makanan\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/payments",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"payments"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Jul 2025 13:36:44 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "212"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"amount\": 25000,\n        \"balance_after\": 75000,\n        \"balance_before\": 100000,\n        \"created_date\": \"2025-07-18 13:36:44\",\n        \"payment_id\": \"89fa7f46-fd16-441a-8856-1e411edd4ea9\",\n        \"remarks\": \"Pembayaran makanan\"\n    },\n    \"status\": \"SUCCESS\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Transfer Money",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"target_user\": \"531551f5-c34c-4c76-969a-302d83187560\",\n  \"amount\": 5000,\n  \"remarks\": \"Transfer ke teman\"\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/api/transfers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"transfers"
+							]
+						},
+						"description": "Endpoint untuk transfer uang ke user lain (memerlukan autentikasi).\n\n**Headers:**\n- `Authorization`: Bearer {access_token}\n\n**Request Body:**\n- `target_user` (string, required): UUID user tujuan transfer\n- `amount` (number, required): Jumlah transfer (harus > 0)\n- `remarks` (string, optional): Keterangan transfer\n\n**Response Success (200):**\n```json\n{\n  \"status\": \"SUCCESS\",\n  \"result\": {\n    \"transfer_id\": \"uuid-string\",\n    \"amount\": 50000,\n    \"remarks\": \"Transfer ke teman\",\n    \"balance_before\": 75000,\n    \"balance_after\": 25000,\n    \"created_date\": \"2025-07-18 13:00:00\"\n  }\n}\n```\n\n**Note:** Transfer akan diproses secara asynchronous menggunakan RabbitMQ."
+					},
+					"response": [
+						{
+							"name": "Transfer Money",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"target_user\": \"531551f5-c34c-4c76-969a-302d83187560\",\n  \"amount\": 5000,\n  \"remarks\": \"Transfer ke teman\"\n}"
+								},
+								"url": {
+									"raw": "{{base_url}}/api/transfers",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"transfers"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Jul 2025 14:07:37 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "210"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": {\n        \"amount\": 5000,\n        \"balance_after\": 70000,\n        \"balance_before\": 75000,\n        \"created_date\": \"2025-07-18 14:07:37\",\n        \"remarks\": \"Transfer ke teman\",\n        \"transfer_id\": \"f92c52dd-c4d8-473e-807e-3adc145d03ca\"\n    },\n    \"status\": \"SUCCESS\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Endpoint untuk operasi wallet (top up, payment, transfer)"
+		},
+		{
+			"name": "Transaction History",
+			"item": [
+				{
+					"name": "Get Transactions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{access_token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/transactions",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"transactions"
+							]
+						},
+						"description": "Endpoint untuk mendapatkan riwayat transaksi user (memerlukan autentikasi).\n\n**Headers:**\n- `Authorization`: Bearer {access_token}\n\n**Response Success (200):**\n```json\n{\n  \"status\": \"SUCCESS\",\n  \"result\": [\n    {\n      \"id\": \"uuid-string\",\n      \"user_id\": \"user-uuid\",\n      \"target_user_id\": null,\n      \"type\": \"TOPUP\",\n      \"amount\": 100000,\n      \"remarks\": \"Top Up\",\n      \"balance_before\": 0,\n      \"balance_after\": 100000,\n      \"status\": \"SUCCESS\",\n      \"created_at\": \"2025-07-18T13:00:00Z\"\n    },\n    {\n      \"id\": \"uuid-string\",\n      \"user_id\": \"user-uuid\",\n      \"target_user_id\": null,\n      \"type\": \"PAYMENT\",\n      \"amount\": 25000,\n      \"remarks\": \"Pembayaran makanan\",\n      \"balance_before\": 100000,\n      \"balance_after\": 75000,\n      \"status\": \"SUCCESS\",\n      \"created_at\": \"2025-07-18T13:05:00Z\"\n    }\n  ]\n}\n```"
+					},
+					"response": [
+						{
+							"name": "Get Transactions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/api/transactions",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"transactions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Jul 2025 14:07:52 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "940"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"result\": [\n        {\n            \"transaction_id\": \"f92c52dd-c4d8-473e-807e-3adc145d03ca\",\n            \"user_id\": \"7fa38278-b7b0-42f9-a0a4-2ce5657d37b8\",\n            \"target_user_id\": \"531551f5-c34c-4c76-969a-302d83187560\",\n            \"transaction_type\": \"DEBIT\",\n            \"amount\": 5000,\n            \"remarks\": \"Transfer ke teman\",\n            \"balance_before\": 75000,\n            \"balance_after\": 70000,\n            \"status\": \"SUCCESS\",\n            \"created_date\": \"2025-07-18T14:07:37.406206Z\"\n        },\n        {\n            \"transaction_id\": \"89fa7f46-fd16-441a-8856-1e411edd4ea9\",\n            \"user_id\": \"7fa38278-b7b0-42f9-a0a4-2ce5657d37b8\",\n            \"transaction_type\": \"DEBIT\",\n            \"amount\": 25000,\n            \"remarks\": \"Pembayaran makanan\",\n            \"balance_before\": 100000,\n            \"balance_after\": 75000,\n            \"status\": \"SUCCESS\",\n            \"created_date\": \"2025-07-18T13:36:44.489864Z\"\n        },\n        {\n            \"transaction_id\": \"61d0109a-dbdd-43ec-9c0d-15c12b79d590\",\n            \"user_id\": \"7fa38278-b7b0-42f9-a0a4-2ce5657d37b8\",\n            \"transaction_type\": \"CREDIT\",\n            \"amount\": 100000,\n            \"remarks\": \"Top Up\",\n            \"balance_before\": 0,\n            \"balance_after\": 100000,\n            \"status\": \"SUCCESS\",\n            \"created_date\": \"2025-07-18T13:35:54.892124Z\"\n        }\n    ],\n    \"status\": \"SUCCESS\"\n}"
+						}
+					]
+				}
+			],
+			"description": "Endpoint untuk mendapatkan riwayat transaksi"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		},
+		{
+			"key": "access_token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

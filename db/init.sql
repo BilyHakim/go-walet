@@ -1,0 +1,2 @@
+CREATE DATABASE ewallet;
+CREATE DATABASE ewallet_test;
